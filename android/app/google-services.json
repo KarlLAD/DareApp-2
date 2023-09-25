@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "477167337940",
+    "project_id": "dashboard-9fc20",
+    "storage_bucket": "dashboard-9fc20.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:477167337940:android:75f29faadc702ecbca1641",
+        "android_client_info": {
+          "package_name": "com.actionverite"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "477167337940-s1taugbamfud3sa1prjnv6c17jj642nd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0LYqj4YoG4VX5cGOYLHzNTLUWjl2i72Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "477167337940-s1taugbamfud3sa1prjnv6c17jj642nd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:477167337940:android:4734c8e09f76ece2ca1641",
+        "android_client_info": {
+          "package_name": "com.dareapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "477167337940-s1taugbamfud3sa1prjnv6c17jj642nd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0LYqj4YoG4VX5cGOYLHzNTLUWjl2i72Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "477167337940-s1taugbamfud3sa1prjnv6c17jj642nd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
