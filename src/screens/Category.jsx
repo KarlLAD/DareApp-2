@@ -1,0 +1,43 @@
+import {View, Text, FlatList} from 'react-native';
+import React, {useEffect, useState} from 'react';
+
+import {useDispatch, useSelector} from 'react-redux';
+import {updateLoading} from '../redux/loading';
+import ItemCategory from '../component/ItemCategory';
+import {loadData} from '../commonjs/function';
+
+const Category = ({navigation}) => {
+  const [categories, setCategories] = useState([]);
+
+  const loading = useSelector(state => state.loading);
+
+  const dispatch = useDispatch();
+
+  const loadCategory = async () => {
+    dispatch(updateLoading());
+    const dataCategories = await loadData('category');
+
+    // console.log("dataCategories : " ,dataCategories );
+
+    setCategories(dataCategories);
+
+    // stop chargement
+  };
+
+  useEffect(() => {
+    loadCategory();
+  }, []);
+
+  return (
+    <View>
+      <Text>Category</Text>
+      <FlatList
+        data={categories}
+        renderItem={({item}) => <ItemCategory Category={item} />}
+        keyExtractor={item => item.id}
+      />
+    </View>
+  );
+};
+
+export default Category;
