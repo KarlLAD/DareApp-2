@@ -5,7 +5,9 @@ import {useDispatch, useSelector} from 'react-redux';
 import {nextPlayer} from '../../redux/player';
 
 
-const NextPlayer = () => {
+
+
+const NextPlayer = ({navigation}) => {
   
   const dispatch = useDispatch();
 
@@ -18,7 +20,7 @@ const NextPlayer = () => {
       dispatch(nextPlayer(position + 1));
     }
 
-    // navigation.navigate('truthordare',{ id : id} )
+    navigation.navigate('truthordare',{ id : id} )
   };
 
   return (
