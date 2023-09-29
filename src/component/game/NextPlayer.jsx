@@ -3,22 +3,30 @@ import React from 'react';
 import {Button} from 'react-native-paper';
 import {useDispatch, useSelector} from 'react-redux';
 import {nextPlayer} from '../../redux/player';
+import { useNavigation } from '@react-navigation/native';
 
 
-const NextPlayer = () => {
+const NextPlayer = ({id}) => {
+
+ 
   
   const dispatch = useDispatch();
 
+  const navigation = useNavigation() ;
+
   const {players, position} = useSelector(state => state.player);
 
+  // permet de passer au joueur suivant
   const suivant = () => {
     if (players.length == position + 1) {
+      // retour au premier joueur
       dispatch(nextPlayer(0));
     } else {
+      
       dispatch(nextPlayer(position + 1));
     }
 
-    // navigation.navigate('truthordare',{ id : id} )
+    navigation.navigate('truthordare', { id : id });
   };
 
   return (
