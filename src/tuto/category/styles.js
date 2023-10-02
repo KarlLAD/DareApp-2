@@ -29,4 +29,13 @@ export default styles = StyleSheet.create({
     color: '#ff6d00',
     fontWeight: '700',
   },
+
+titleCategoryStore : {
+
+  color : '#ff60c',
+  fontSize : 20 ,
+  fontWeight : "800",
+  
+
+}
 });
