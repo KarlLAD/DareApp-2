@@ -9,7 +9,7 @@ export const getRandomIndex = (min, max) => {
 
 // charge les données d'une collection à partir de son Name
 export const loadData = async collectionName => {
-  const snapShot = await firestore('DareOrTruth').collection(collectionName).get();
+  const snapShot = await firestore().collection(collectionName).get();
 
   console.log('collectionName : ', snapShot.empty);
 

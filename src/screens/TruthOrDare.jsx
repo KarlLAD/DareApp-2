@@ -18,7 +18,7 @@ const TruthOrDare = ({navigation}) => {
       <Button
         mode="contained"
         onPress={
-          (console.log('T or D'), () => navigation.navigate('showtruthordare',{id : id, type:'dare'} ))
+          (console.log('T or D'), () => navigation.navigate('showtruthordare',{id : id, type:'truth'} ))
         }>
         Vérité
       </Button>

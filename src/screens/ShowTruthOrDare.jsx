@@ -1,52 +1,43 @@
 import {View, Text} from 'react-native';
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import {useSelector} from 'react-redux';
 
 import NextPlayer from '../component/game/NextPlayer';
-import { getRandomIndex } from '../commonjs/function';
+import {getRandomIndex} from '../commonjs/function';
 
-const ShowTruthOrDare = ({route})  => {
-
+const ShowTruthOrDare = ({route}) => {
   // props : {route}
 
-  const { id } = route.params ;
+  const {id, type} = route.params;
 
   const [showtod, setshowtod] = useState();
 
-
   const {players, position} = useSelector(state => state.player);
 
+  const loadDareOrTruth = async () => {
+    console.log('load : showTruthOrDare');
 
-  const loadDareOrTruth = async () => { 
+    const dataTruthOrDare = await loadDareOrTruth(id, type);
 
-    console.log('load');
+    console.log('dataTruthOrDare : ', dataTruthOrDare);
 
-  const dataTruthOrDare  =  await loadDareOrTruth(id);
+    const index = getRandomIndex(0, dataTruthOrDare.lenght);
 
-  console.log("dataTruthOrDare", dataTruthOrDare);
+    console.log('index :', index);
 
-  const index = getRandomIndex(0,dataTruthOrDare.lenght);
+    setshowtod(dataTruthOrDare[index]);
+  };
 
-  console.log(index);
-
-  setshowtod(dataTruthOrDare[index]) ;
-
-
-   } ;
-
-
-   useEffect(()=> {
-
+  useEffect(() => {
     loadDareOrTruth();
-   },[] )
+  }, []);
 
   return (
     <View>
       <Text>{players[position]?.name}</Text>
       <Text>{showtod?.title} </Text>
-      
-      <NextPlayer id={id} />
 
+      <NextPlayer id={id} />
     </View>
   );
 };

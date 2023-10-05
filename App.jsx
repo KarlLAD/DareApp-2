@@ -1,18 +1,15 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import  Route  from './src/screens/Route'
-
+import {StyleSheet, Text, View} from 'react-native';
+import React, {useEffect} from 'react';
+import Route from './src/screens/Route';
+// import {migrate} from './dataStore/migrate';
 
 const App = () => {
-  return (
+  // useEffect(() => {
+  //   migrate();   // a utilider une seule fois
+  // }, []);
+  return <Route />;
+};
 
-    
-    <Route />
+export default App;
 
-
-  )
-}
-
-export default App
-
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});
