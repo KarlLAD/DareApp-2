@@ -47,7 +47,7 @@ const Category = ({navigation}) => {
     const dataCategories = await loadData('category');
     console.log("loadCategory");
 
-    console.log('dataCategories : ', dataCategories);
+    // console.log('dataCategories : ', dataCategories);
 
     setCategories(dataCategories);
 

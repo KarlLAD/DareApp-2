@@ -15,6 +15,7 @@ const AddPlayer = () => {
     const dispatch = useDispatch();
 
 
+
     // enregistrement dans le store
     const send = (value) => { 
 
@@ -25,7 +26,8 @@ const AddPlayer = () => {
                     const newPlayer = {
 
                         id : Date.now() ,
-                        name : value ,
+                        name: value,
+                        tod : [],
                     }
 
                     dispatch(addPlayer(newPlayer))

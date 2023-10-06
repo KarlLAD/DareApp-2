@@ -4,27 +4,32 @@ import {useNavigation} from '@react-navigation/native';
 import styles from '../../styles';
 import {Text, View, Image} from 'react-native';
 
+console.log('ItemCategory');
 const ItemCategory = ({category}) => {
   const navigation = useNavigation();
-  console.log('ItemCategory');
-  console.log('category : ', category);
+ 
+
+  // console.log('category : ', category);
 
   return (
     // <List.Item
-    //   title={Category.name}
+    //   title={category.name}
     //   onPress={() => navigation.navigate('truthordare', {id: Category.id})}
     // />
 
-    <View style={[styles.slide, {backgroundColor: category.color}]}>
-      <Text style={styles.slideTitle}>{category.name}</Text>
-      <Image source={{uri: category.image}} style={styles.slideImage} />
-      <Text style={styles.slideText}>{category.description}</Text>
+    //style={[styles.slide, {backgroundColor: category.color}]}
+    <View>
+      <Text>category name</Text>
+      {/* {category.name} */}
+      {/* <Text style={styles.slideTitle}>{category.name}</Text> */}
+      {/* <Image source={{uri: category.image}} style={styles.slideImage} /> */}
+      {/* <Text style={styles.slideText}>{category.description}</Text> */}
 
-      <Button
+      {/* <Button
         mode="contained"
         onPress={() => navigation.navigate('truthordare', {id: category.id})}>
         Press me
-      </Button>
+      </Button> */}
     </View>
 
     // {/* <TouchableOpacity onPress={ ()=>  }  style={[
