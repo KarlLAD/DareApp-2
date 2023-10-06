@@ -1,7 +1,9 @@
 import * as React from 'react';
 import {List} from 'react-native-paper';
 import {useNavigation} from '@react-navigation/native';
-import {  View, Text} from "react-native";
+import { View, Text } from "react-native";
+import styles from '../../styles';
+import { category } from '../tuto/redux/category';
 
 const ItemCategory = ({Category}) => {
   const navigation = useNavigation();
@@ -26,9 +28,9 @@ const ItemCategory = ({Category}) => {
       ]
       
       }>
-      <Text style={styles.slideTitle}>{item.slideTitle}</Text>
+      <Text style={styles.slideTitle}>{category.slideTitle}</Text>
       {/* <Image source={{ Category.image }} /> */}
-      <Text style={styles.description}>{item.description}</Text>
+      <Text style={styles.description}>{category.description}</Text>
 
     </View>
   );

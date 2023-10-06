@@ -8,9 +8,9 @@ const CategoryItem = ({ category}) => {
     <TouchableOpacity  style={styles.categoryItemContainer}  >
 
 
-      <Text style={styles.categoryItemText}  >{category.name}</Text>
+      <Text style={styles.categoryItemText}>{category.name}</Text>
   
-      </TouchableOpacity>
+    </TouchableOpacity>
   )
 }
 
